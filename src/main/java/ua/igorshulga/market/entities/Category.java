@@ -1,6 +1,6 @@
-package ua.igorshulga.market.entity;
+package ua.igorshulga.market.entities;
 
-public enum Сategory {
+public enum Category {
     MILK_FOOD, EGGS, CHEESE, MEAT, MEAT_PRODUCTS, VEGETABLE_OIL,
     FRUITS, DRIED_FRUITS, NUTS, VEGETABLES,
     HONEY, HONEY_PRODUCTS, BERRYS,
