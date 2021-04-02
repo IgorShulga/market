@@ -13,20 +13,20 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
+    @Column(length = 64, unique = true, nullable = false)
     private String login;
 
-    @Column(unique = true, nullable = false, length = 128)
+    @Column(length = 128, unique = true, nullable = false)
     private String password;
 
     @OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
     private UserDetails userDetails;
 
-    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
-    private Set<Product> products;
-
-    @OneToMany(mappedBy = "seller", fetch = FetchType.LAZY)
-    private Set<Order> sales;
+//    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
+//    private Set<Product> products;
+//
+//    @OneToMany(mappedBy = "seller", fetch = FetchType.LAZY)
+//    private Set<Order> sales;
 
 //    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
 //    private Set<Product> purchases;

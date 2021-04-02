@@ -15,21 +15,19 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(length = 128, nullable = false)
     private String name;
 
-    @Column(name = "section")
-    @Enumerated(EnumType.STRING)
-    private Section section;
-
-    @Column(name = "category")
-    @Enumerated(EnumType.STRING)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "category", referencedColumnName = "id", nullable = false)
     private Category category;
 
     @Column(name = "unit")
     @Enumerated(EnumType.STRING)
     private Unit unit;
 
-    private BigDecimal price;
+    @Column(name = "unit_price")
+    private BigDecimal unitPrice;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "owner", referencedColumnName = "id", nullable = false)
