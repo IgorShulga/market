@@ -19,7 +19,6 @@ public class Category {
     @Column(name = "section")
     @Enumerated(EnumType.STRING)
     private Section section;
-
 }
 
 //    MILK_FOOD, EGGS, CHEESE, MEAT, MEAT_PRODUCTS, VEGETABLE_OIL,
