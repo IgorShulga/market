@@ -16,8 +16,8 @@ public class Category {
     @Column(length = 64, nullable = false)
     private String name;
 
-    @Column(name = "section")
-    @Enumerated(EnumType.STRING)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "section_id", referencedColumnName = "id", nullable = false)
     private Section section;
 }
 
